@@ -7,94 +7,57 @@
 
 	<div class="col-md-8 col-md-offset-2">
 		
-<%-- 		Request statusUpdate attribute: <%= request.getAttribute("statusUpdate") %><br/> --%>
-<%-- 		JSP object: <%= this %><br/> --%>
-<%-- 	    JSP class: <%= this.getClass() %><br/> --%>
-	
+		Request statusUpdate attribute: <%= request.getAttribute("statusUpdate") %><br/>
+		JSP object: <%= this %><br/>
+	    JSP class: <%= this.getClass() %><br/>
+
 		<div class="panel panel-default">
-		
+
 			<div class="panel-heading">
 				<div class="panel-title">Add a Status Update</div>
 			</div>
-			
+
 			<div class="panel-body">
-				
+
 				<form:form modelAttribute="statusUpdate">
-				
-				<%-- <form:input type="hidden" path="id" /> --%>
-				
+
+					<div>
+						<form:errors path="text" />
+					</div>
 					<div class="form-group">
 						<form:textarea path="text" name="text" rows="10" cols="50"></form:textarea>
 					</div>
-					
-					<input type="submit" name="submit" value="Add Status" />				
+
+					<input type="submit" name="submit" value="Add Status" />
 				</form:form>
-			
+
 			</div>
-		 
+
+
 		</div>
-	
-	
-	
-	
+
 		<div class="panel panel-default">
-		
+
 			<div class="panel-heading">
-				<div class="panel-title">Status update added on <fmt:formatDate pattern="EEEE d MMMM y 'at' H:mm:s" value="${latestStatusUpdate.added}" /></div>
+				<div class="panel-title">
+					Status update added on
+					<fmt:formatDate pattern="EEEE d MMMM y 'at' H:mm:s"
+						value="${latestStatusUpdate.added}" />
+				</div>
 			</div>
-			
+
 			<div class="panel-body">
-				
+
 				<c:out value="${latestStatusUpdate.text}" />
-			
+
 			</div>
-		
-		
+
+
 		</div>
-	
+
+
 	</div>
 
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
