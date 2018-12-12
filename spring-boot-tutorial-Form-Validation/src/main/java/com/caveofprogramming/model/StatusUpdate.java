@@ -24,8 +24,8 @@ public class StatusUpdate {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	@NotNull
-	@Size(min=2, max=255)
+	//@NotNull
+	@Size(min=2, max=255, message="{addstatus.text.size}")
 	@Column(name = "text")
 	private String text;
 
